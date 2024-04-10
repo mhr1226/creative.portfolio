@@ -1,3 +1,54 @@
+header {
+  display: flex;
+  background-color: gray;
+  z-index: 9;
+}
+
+#nav-pc {
+  font-size: 15px;
+  color: black;
+
+
+  position: absolute;
+  top: 20px;
+  right: 30px;
+
+
+
+
+}
+
+#link-box {
+  background-color: rgba(white, 0.2);
+  padding: 20px 10px;
+  border-radius: 0 0 0 30px;
+
+  >div {
+    background-color: rgba(white, 0.5);
+  }
+
+  a {
+    text-decoration: none;
+    color: red;
+
+    &:hover {
+      text-decoration: underline;
+      color: blue;
+    }
+
+
+  }
+
+}
 h1{
 color:red;
+}
+#logo-img {
+  width: 300px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+#contact-2 {
+  margin: 1500px 0;
 }
