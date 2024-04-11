@@ -10,32 +10,52 @@
     <meta name="description" 
     content="私が作ったポートフォリオサイトです" />
     <link rel="stylesheet" href="creative.SCSS.css">
+    <script 
+    src="https://kit.fontawesome.com/55223a1948.js" 
+    crossorigin="anonymous">
+  </script>
   </head>
   <body>
     <header>
       <!-- ロゴ -->
       <a href="creative.html" id="logo">
-        <img id="logo-img" src="image\logo.png" 
-          alt="トップページに戻る" />
+        <i class="fa-brands fa-wordpress" alt="トップページに戻る"></i>
+        
       </a>
       <!-- ハンバーガーメニューボタン -->
-      <img id="menu-pc-sp" src="image\button.png" alt="メニューを開く" onclick="document.getElementById('nav-pc-sp').style.display = 'block'" >
+      <i class="fa-solid fa-bars" 
+      onclick="document.getElementById
+      ('nav-pc-sp').style.display = 'block'"></i>
+
+      
       <!-- ナビゲーション -->
       <nav id="nav-pc-sp">
-        <div id="link-box">
-          <div id="a-box">
-          <a href="mission.html" id="mission">ミッション</a>
-          <a href="product.html" id="product">プロダクト</a>
-          <a href="blog.html" id="blog">ブログ</a>
-          <a href="creative.html#contact" id="contact-1">コンタクト</a>
-          </div>
-          
-      </div>
+        <!-- 閉じるボタン -->
+        <i class="fa-solid fa-xmark" 
+        onclick="document.getElementById
+        ('nav-pc-sp').style.display='none'"></i>
+
+            <!-- ミッション -->
+          <a href="mission.html" id="menu" 
+          onclick="document.getElementById
+          ('nav-pc-sp').style.display='block'">ミッション</a>
+            <!-- プロダクト -->
+          <a href="product.html" id="menu " 
+          onclick="document.getElementById
+          ('nav-pc-sp').style.display='block'">プロダクト</a>
+            <!-- ブログ -->
+          <a href="blog.html" id="menu" 
+          onclick="document.getElementById
+          ('nav-pc-sp').style.display='block'">ブログ</a>
+            <!-- コンタクト -->
+          <a href="creative.html#contact" id="menu" 
+          onclick="document.getElementById
+          ('nav-pc-sp').style.display='block'">コンタクト</a>
         
       </nav>
     </header>
     <main>
-      <section id="contact-2">
+      <section id="contact">
         <h1>お問い合わせ</h1>
         <h3>お問い合わせはこちら</h3>
         <form>

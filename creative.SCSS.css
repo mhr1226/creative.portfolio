@@ -1,45 +1,70 @@
+@charset "UTF-8";
 header {
   display: flex;
   background-color: gray;
   z-index: 9;
 }
 
-#nav-pc {
+#nav-pc-sp {
   font-size: 15px;
   color: black;
-  position: absolute;
-  top: 20px;
-  right: 30px;
+  display: block;
 }
 
 #link-box {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 20px 10px;
   border-radius: 0 0 0 30px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
 }
 #link-box > div {
   background-color: rgba(255, 255, 255, 0.5);
-}
-#link-box a {
-  text-decoration: none;
-  color: red;
-}
-#link-box a:hover {
-  text-decoration: underline;
-  color: blue;
 }
 
 h1 {
   color: red;
 }
 
-#logo-img {
-  width: 300px;
-  height: 150px;
+.fa-brands {
+  font-size: 100px;
   border-radius: 50%;
 }
 
-#contact-2 {
+/*ハンバーガー*/
+.fa-solid.fa-bars {
+  font-size: 50px;
+  color: white;
+  float: left;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*バツマーク*/
+.fa-solid.fa-xmark {
+  font-size: 50px;
+  color: white;
+  background-color: green;
+  width: 40%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 100%;
+}
+
+#menu {
+  text-decoration: none;
+  color: red;
+}
+#menu:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+#contact {
   margin: 1500px 0;
 }
 /*# sourceMappingURL=creative.SCSS.css.map */
