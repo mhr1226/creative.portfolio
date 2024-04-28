@@ -1,38 +1,39 @@
 @charset "UTF-8";
 body {
-  color: black;
-  background-color: white;
-  font-family: "https://fonts.google.com/noto/specimen/Noto+Sans+JP";
+  font-family: "Noto Sans Japanese";
+  max-width: 1080px;
+  min-width: 960px;
+  margin: 0 auto;
 }
 
 /*PC用のスタイル*/
-@media screen and (max-width: 768px) {
-  body {
-    max-width: 1080px;
-    min-width: 960px;
+@media screen and (min-width: 768px) {
+  header {
+    margin: 30px 0;
   }
-}
-#nav-pc {
-  margin: 30px auto;
-}
-#nav-pc > a {
-  font-size: 34px;
-  font-weight: bold;
-  padding: 10px;
-}
-#nav-pc > #MyProfile {
-  border: 1px solid black;
-  margin: 30px 220px;
-}
-#nav-pc > #menu {
-  margin: 30px 30px;
-}
-#nav-pc > img {
-  margin: 30px 0;
-  width: 100%;
-}
-
-a {
-  font-size: 20px;
+  #nav-pc {
+    font-size: 34px;
+    font-weight: bold;
+  }
+  #nav-pc a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+  }
+  #nav-pc #MyProfile {
+    border: 1px solid;
+    padding: 5px 10px;
+    margin: 30px 190px;
+  }
+  #nav-pc #menu {
+    margin: 30px auto;
+    display: inline-block;
+  }
+  #nav-pc #menu > a {
+    margin: 0 30px;
+  }
+  #header-img {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=design_style.SCSS.css.map */
