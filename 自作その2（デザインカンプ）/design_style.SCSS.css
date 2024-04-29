@@ -32,6 +32,12 @@ body {
   #menu > a {
     margin: auto 30px;
   }
+  #menu > a:hover {
+    color: gray;
+  }
+  #menu > a:active {
+    color: black;
+  }
   #header-img {
     width: 100%;
   }
@@ -78,6 +84,13 @@ body {
     font-size: 18px;
     text-align: center;
     width: 95%;
+  }
+  footer {
+    margin-top: 40px;
+  }
+  #copyright {
+    font-size: 18px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=design_style.SCSS.css.map */

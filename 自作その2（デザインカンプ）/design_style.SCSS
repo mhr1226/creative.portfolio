@@ -46,7 +46,14 @@ body{
       > a{
         // AboutとWorks間の余白
         margin:auto 30px;
-    
+        
+        &:hover{
+          color:gray;
+        }
+
+        &:active{
+          color:black;
+        }
   }
 }
 
@@ -122,4 +129,14 @@ section{
     width:95%;
   }
   }
+  footer{
+    margin-top:40px;
+    
+  }
+  
+  #copyright{
+      font-size:18px;
+      text-align:center;
+    }
+
 }
