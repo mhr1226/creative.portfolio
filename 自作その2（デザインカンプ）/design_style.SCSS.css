@@ -1,13 +1,15 @@
 @charset "UTF-8";
 body {
   font-family: "Noto Sans Japanese";
-  max-width: 1080px;
-  min-width: 960px;
   margin: 0 auto;
 }
 
 /*PC用のスタイル*/
 @media screen and (min-width: 768px) {
+  body {
+    max-width: 1080px;
+    min-width: 960px;
+  }
   header {
     margin-top: 20px;
   }
@@ -91,6 +93,41 @@ body {
   #copyright {
     font-size: 18px;
     text-align: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 375px;
+  }
+  header {
+    margin: 20px 0;
+  }
+  #nav-pc {
+    display: none;
+  }
+  #nav-sp {
+    display: flex;
+    justify-content: space-between;
+  }
+  #nav-sp a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 0 5px;
+  }
+  #MyProfile, #menu {
+    font-size: 34px;
+  }
+  #MyProfile {
+    border: 1px solid;
+    margin-left: 10px;
+  }
+  #menu {
+    margin-right: 10px;
+  }
+  #header-img {
+    margin-top: 20px;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=design_style.SCSS.css.map */
