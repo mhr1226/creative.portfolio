@@ -83,6 +83,8 @@ section{
   width:15%;
   // 中身の中央揃え
   text-align:center;
+  // 画像の余白
+  padding-right:10px;
   > img{
     // 円形にする為
     border-radius:50%;
@@ -91,9 +93,6 @@ section{
   }
 }
 
-#About_list{
-  margin:0 50px;
-}
   h3{
     font-size:24px;
   }
@@ -101,4 +100,26 @@ section{
     font-size:18px;
   }
 
+  // Works
+  #Works{
+    display:flex;
+    justify-content:center;
+    gap:30px;
   }
+
+  #Works-box{
+    // Aboutと横幅が揃うように調整
+    width:17%;
+
+  img{
+    width:100%;
+  }
+
+  p{
+    font-size:18px;
+    // 文字の改行による画像のずれ対策
+    text-align:center;
+    width:95%;
+  }
+  }
+}

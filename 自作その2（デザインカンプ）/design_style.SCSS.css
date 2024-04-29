@@ -51,19 +51,33 @@ body {
   #About_img {
     width: 15%;
     text-align: center;
+    padding-right: 10px;
   }
   #About_img > img {
     border-radius: 50%;
     width: 100%;
-  }
-  #About_list {
-    margin: 0 50px;
   }
   h3 {
     font-size: 24px;
   }
   li {
     font-size: 18px;
+  }
+  #Works {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  #Works-box {
+    width: 17%;
+  }
+  #Works-box img {
+    width: 100%;
+  }
+  #Works-box p {
+    font-size: 18px;
+    text-align: center;
+    width: 95%;
   }
 }
 /*# sourceMappingURL=design_style.SCSS.css.map */
