@@ -12,19 +12,21 @@ body{
 
   // ヘッダーとメインの余白をとるために使用
   header{
-    margin:30px 0;
+    margin:20px 0;
   }
 
 
   #nav-pc{
     font-size:34px;
     font-weight:bold;
+    display:flex;
     // aタグ全体のCSS
     a{
       text-decoration:none;
       text-align:center;
       color:black;
     }
+  }
 
     // マイプロフィール
     #MyProfile{
@@ -33,28 +35,28 @@ body{
       // 枠内の余白
       padding:5px 10px;
       // 枠外の余白
-      margin:30px 190px;
+      margin:30px 90px;
     }
 
     // メニュー
     #menu{
       // divを使用
-      // プロフィールとの余白調整の為
-      // 横並びにするように対応
-      margin:30px auto;
-      display:inline-block;
-      // リンク全体の余白
+      // プロフィールとの余白
+      margin:auto;
       > a{
-        margin:0 30px;
-      }
-    }
-
+        // AboutとWorks間の余白
+        margin:auto 30px;
     
   }
+}
 
+// 画像いっぱいに広げる
 #header-img{
     // 画面内に画像が収まるように
       width:100%;
     }
-  
-}
+
+
+
+
+  }
