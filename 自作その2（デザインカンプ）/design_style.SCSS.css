@@ -23,6 +23,9 @@ body {
     text-align: center;
     color: black;
   }
+  #nav-sp {
+    display: none;
+  }
   #MyProfile {
     border: 1px solid;
     padding: 5px 10px;
