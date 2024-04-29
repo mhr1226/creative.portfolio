@@ -114,7 +114,7 @@ section{
   }
 
   // Works
-  #Works{
+  #Works-main{
     display:flex;
     justify-content:center;
     gap:20px;
@@ -151,15 +151,15 @@ section{
   body{
     min-width:375px;
   }
-
+// ヘッダー
   header{
     margin:20px 0;
   }
-
+// PC用のナビを消す
   #nav-pc{
     display:none;
   }
-
+// ナビゲーション
   #nav-sp{
     display:flex;
     justify-content: space-between;
@@ -169,7 +169,16 @@ section{
       color:black;
       font-weight:bold;
       margin:0 5px;
+
+      &:hover{
+        color:gray;
+      }
+
+      &:active{
+        color:black;
+      }
     }
+
   }
   #MyProfile,#menu{
     font-size:34px;
@@ -188,4 +197,54 @@ section{
     margin-top:20px;
     width:100%;
   }
+
+  // About
+
+  .index-h2{
+    text-align:center;
+    font-size:34px;
+    margin:10px 0;
+  }
+
+  #About-main{
+    display:flex;
+    justify-content:center;
+    margin-left:-60px;
+  }
+
+  h3{
+    font-size:24px;
+  }
+  #About_img{
+    width:20%;
+    padding:30px 20px 0 0;
+    > img{
+      border-radius:50%;
+      width:100%;
+    }
+  }
+
+#Works{
+  display:flex;
+  flex-flow:column wrap;
+  text-align:center;
+}
+
+#Works_img{
+  width:100%;
+
+  img{
+    width:640px;
+  }
+}
+
+#Works_p{
+  font-size:18px;
+  text-align:center;
+}
+
+#copyright{
+  font-size:18px;
+  text-align:center;
+}
 }

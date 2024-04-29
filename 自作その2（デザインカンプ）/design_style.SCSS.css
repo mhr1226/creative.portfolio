@@ -74,7 +74,7 @@ body {
   li {
     font-size: 18px;
   }
-  #Works {
+  #Works-main {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -118,6 +118,12 @@ body {
     font-weight: bold;
     margin: 0 5px;
   }
+  #nav-sp a:hover {
+    color: gray;
+  }
+  #nav-sp a:active {
+    color: black;
+  }
   #MyProfile, #menu {
     font-size: 34px;
   }
@@ -131,6 +137,46 @@ body {
   #header-img {
     margin-top: 20px;
     width: 100%;
+  }
+  .index-h2 {
+    text-align: center;
+    font-size: 34px;
+    margin: 10px 0;
+  }
+  #About-main {
+    display: flex;
+    justify-content: center;
+    margin-left: -60px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  #About_img {
+    width: 20%;
+    padding: 30px 20px 0 0;
+  }
+  #About_img > img {
+    border-radius: 50%;
+    width: 100%;
+  }
+  #Works {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+  }
+  #Works_img {
+    width: 100%;
+  }
+  #Works_img img {
+    width: 640px;
+  }
+  #Works_p {
+    font-size: 18px;
+    text-align: center;
+  }
+  #copyright {
+    font-size: 18px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=design_style.SCSS.css.map */
