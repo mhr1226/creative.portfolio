@@ -1,30 +1,23 @@
 body{
   font-family:'Noto Sans Japanese';
-  margin:0 auto;
+  margin:0;
+  padding:0;
 }
 
 
 /*PC用のスタイル*/
 @media screen and(min-width:768px){
-  body{
-  max-width:1080px;
-  min-width:960px;
-  }
-
-  // 全体の左右の余白をとるため
-  // ヘッダーとメインの余白をとるために使用
-  header{
-    margin-top:20px;
-  }
-
 
   #nav-pc{
-    font-size:34px;
-    font-weight:bold;
     display:flex;
+    flex-wrap:wrap;
     justify-content:space-around;
+    margin:20px auto;
+    max-width:960px;
     // aタグ全体のCSS
     a{
+      font-size:34px;
+      font-weight:bold;
       text-decoration:none;
       text-align:center;
       color:black;
@@ -40,8 +33,9 @@ body{
       // 枠線のCSS
       border:1px solid;
       // 枠内の余白
-      padding:5px 10px;
+      padding:0 20px;
       // 枠外の余白
+      margin-left:20px;
     }
 
     // メニュー
@@ -51,7 +45,7 @@ body{
       
       > a{
         // AboutとWorks間の余白
-        margin:auto 20px;
+        margin-left:20px;
         
         &:hover{
           color:gray;
@@ -67,12 +61,12 @@ body{
 #header-img{
     // 画面内に画像が収まるように
       width:100%;
-      margin-top:20px;
     }
 
     // About
 
     .index-h2{
+    padding:60px 0 40px 0;
     font-size:34px;
     text-align:center;
     margin:0;
@@ -86,25 +80,28 @@ section{
 
 #About-main{
   display:flex;
-  // 両端の中央揃えの為
-  justify-content:center;
+  flex-wrap:wrap;
   // 各子要素を中央揃えする為
   align-items:center;
-}
+  padding:10px;
+  margin:20px auto 20px;
+  max-width:960px;
 
-#About_img{
-  // 画像のあるdivのサイズ調整
-  width:15%;
-  // 中身の中央揃え
-  text-align:center;
-  // 画像の余白
-  padding-right:10px;
-  > img{
+  img{
     // 円形にする為
     border-radius:50%;
     // 画像のサイズ調整
-    width:100%;
+    height:280px;
+    width:280px;
+    object-fit:cover;
+    border: 3px solid #999;
+    padding:3px;
   }
+}
+
+.content{
+  margin:0 auto;
+  padding-left:40px;
 }
 
   h3{
@@ -123,7 +120,7 @@ section{
 
   #Works-box{
     // Aboutと横幅が揃うように調整
-    width:17%;
+    width:25%;
 
   img{
     width:100%;
