@@ -17,6 +17,7 @@ body {
     font-size: 34px;
     font-weight: bold;
     display: flex;
+    justify-content: space-around;
   }
   #nav-pc a {
     text-decoration: none;
@@ -29,13 +30,9 @@ body {
   #MyProfile {
     border: 1px solid;
     padding: 5px 10px;
-    margin: 30px 90px;
-  }
-  #menu {
-    margin: auto;
   }
   #menu > a {
-    margin: auto 30px;
+    margin: auto 20px;
   }
   #menu > a:hover {
     color: gray;
@@ -45,6 +42,7 @@ body {
   }
   #header-img {
     width: 100%;
+    margin-top: 20px;
   }
   .index-h2 {
     font-size: 34px;
