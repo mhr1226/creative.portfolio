@@ -10,21 +10,24 @@ body{
 // flexboxの基本プロパティ
 @mixin flex-df-setting($display:flex,$wrap:false,$justify:false,$align-i:false){
   display:$display;
-  flex-wrap:$wrap;
-  justify-content:$justify;
-  align-items:$align-i;
 
   // 記述が不要な時に制御する為のミックスイン
   @if $wrap != false{
     flex-wrap:$wrap;
+  } @else{
+    flex-wrap:nowrap;
   }
 
   @if $justify != false{
     justify-content:$justify;
+  } @else{
+    justify-content: flex-start;
   }
 
   @if $align-i != false{
     align-items:$align-i;
+  } @else{
+    align-items: stretch;
   }
 }
 
@@ -52,9 +55,15 @@ body{
   .font-sizeMax{
       font-size:34px;
       font-weight:bold;
-      text-align:center;
   }
 
+  .font-18px{
+    font-size:18px;
+  }
+
+  .t-align-center{
+    text-align:center;
+  }
     
 
     // マイプロフィール
@@ -100,6 +109,7 @@ section{
   max-width:960px;
 }
 
+
 #About-img{
     // 円形にする為
     border-radius:50%;
@@ -122,9 +132,6 @@ section{
   h3{
     font-size:24px;
   }
-  li{
-    font-size:18px;
-  }
 
   // Works
   #Works-main{
@@ -141,19 +148,10 @@ section{
   }
 
   p{
-    font-size:18px;
-    // 文字の改行による画像のずれ対策
-    text-align:center;
     width:95%;
   }
   }
   footer{
     margin-top:40px;
-    
   }
-  
-  #copyright{
-      font-size:18px;
-      text-align:center;
-    }
 /*ここまで共通*/
