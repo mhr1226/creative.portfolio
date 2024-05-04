@@ -1,4 +1,60 @@
 @charset "UTF-8";
+@-webkit-keyframes slider {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slider {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slider2 {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slider2 {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes zoomIn {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 body {
   font-family: "Noto Sans Japanese";
   /*bodyの余白を消す*/
@@ -111,31 +167,10 @@ section {
   opacity: 1;
 }
 
-@-webkit-keyframes slider {
-  0% {
-    opacity: 0;
-    transform: translateX(-200px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 @keyframes slider {
   0% {
     opacity: 0;
     transform: translateX(-200px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@-webkit-keyframes slider2 {
-  0% {
-    opacity: 0;
-    transform: translateX(200px);
   }
   100% {
     opacity: 1;
@@ -150,14 +185,6 @@ section {
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-@-webkit-keyframes zoomIn {
-  0% {
-    transform: scale(0.2);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 @keyframes zoomIn {
