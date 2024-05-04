@@ -68,12 +68,13 @@ body{
 #header-img{
     // 画面内に画像が収まるように
       width:100%;
-      transform:scale(80%);
-      transition:transform .3s 0s;
-
-      &:hover{
-        transform:scale(100%);
-      }
+      animation-name:zoomIn;
+      animation-duration:1s;
+      animation-timing-function:ease;
+      animation-delay:0;
+      animation-iteration-count:1;
+      animation-direction:normal;
+      animation-fill-mode:backwards;
     }
     // About
 
@@ -81,13 +82,66 @@ body{
 section{
 // 見出しと見出しの間の余白
   margin-top:40px;
-  transform:scale(80%);
-  transition:transform .5s 0s;
+}
 
-  &:hover{
-    transform:scale(100%);
+.sliders{
+  animation-name:slider;
+  animation-duration:1.5s;
+  animation-timing-function:cubic;
+  animation-delay:0;
+  animation-iteration-count:1;
+  animation-direction:normal;
+  animation-fill-mode:backwards;
+  opacity:1;
+}
+
+.sliders2{
+  animation-name:slider2;
+  animation-duration:1.5s;
+  animation-timing-function:cubic;
+  animation-delay:0;
+  animation-iteration-count:1;
+  animation-direction:normal;
+  animation-fill-mode:backwards;
+  opacity:1;
+}
+
+
+@keyframes slider{
+  0%{
+    opacity:0;
+    transform:translateX(-200px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateX(0);
   }
 }
+
+@keyframes slider2{
+  0%{
+    opacity:0;
+    transform:translateX(200px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+@keyframes zoomIn{
+  0%{
+    transform:scale(0.2);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+}
+
+
 
 
 #About-main{
