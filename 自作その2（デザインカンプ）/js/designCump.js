@@ -93,6 +93,13 @@ if(Number0 %2 ===0 && Number0 %5 ===0){
   console.log(Number0);
 }
 
+const accountData = {name:'ひろし',age:18,gender:'男性'};
+
+console.log(accountData);
+
+accountData.name = 'ひろ';
+
+console.log(accountData.name);  
 
 
 
