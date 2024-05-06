@@ -1,0 +1,73 @@
+@use "../../../default_mixin_setting/_main_mixin" as *;
+
+body{
+  @include space-setting(0,0);
+  display: grid;
+  min-height:100vh;
+}
+
+.grid{
+  display:grid;
+  grid-template:
+  /*ヘッダー*/
+  "head" 1fr
+  /*メイン*/
+  "main" 4fr
+  /*フッター*/
+  "foot" 20px/1fr;
+  height:100vh;
+}
+
+.header{
+  grid-area:head;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:960px;
+  padding:0 4%;
+  height:270px;
+  gap:30%;
+  
+  a{
+    text-decoration:none;
+  color:black;
+  }
+}
+
+#My-Work{
+  margin:0;
+  padding:0;
+  font-size:30px;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+}
+
+.menu{
+  margin:auto 20px;
+
+}
+
+#sns{
+  display:block;
+  width:22px;
+}
+    
+
+
+
+.main{
+  grid-area:main;
+}
+
+#main-img{
+  width:100%;
+}
+
+.footer{
+  grid-area:foot;
+  border: 1px solid black;
+}
