@@ -4,7 +4,7 @@ body {
   padding: 0;
   font-family: serif;
   display: grid;
-  grid-template: "head" 1fr "main" 1fr "foot" 1fr/1fr;
+  grid-template: "head" 270px "main" 1fr "foot" 1fr/1fr;
   min-height: 100vh;
 }
 
@@ -16,7 +16,7 @@ header {
   /*リンクの色とデザイン調整*/
 }
 header > a {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
 }
 header a {
@@ -27,7 +27,8 @@ header a {
 nav {
   display: flex;
   gap: 20px;
-  font-size: 20px;
+  font-size: 18px;
+  /*インスタアイコン*/
 }
 nav img {
   width: 20px;
@@ -36,12 +37,34 @@ nav img {
 
 main {
   grid-area: main;
+  display: flex;
+  flex-flow: row wrap;
 }
 main > img {
   width: 100%;
+  justify-self: flex-start;
 }
-
-footer {
+main h1 {
+  text-align: center;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+main section #first-li {
+  margin-bottom: 40px;
+}
+main section ul {
+  padding: 0;
+  list-style: none;
+}
+main section ul, main section p {
+  width: 80%;
+}
+main footer {
   grid-area: foot;
 }
 /*# sourceMappingURL=copy_coding.SCSS.css.map */
