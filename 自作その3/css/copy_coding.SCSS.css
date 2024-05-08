@@ -1,70 +1,54 @@
-@charset "UTF-8";
 body {
-  margin: 0;
-  padding: 0;
   font-family: serif;
   display: grid;
-  grid-template: "head" 270px "main" 1fr "foot" 1fr/1fr;
+  grid-template: "head" "main" "foot"/1fr;
   min-height: 100vh;
 }
 
 header {
   grid-area: head;
-  display: flex;
-  justify-content: space-around;
+}
+
+section {
+  display: grid;
   align-items: center;
-  /*リンクの色とデザイン調整*/
+  grid-template: ". . . . " 60px "My-work My-work menu menu " ". . . . " 60px "head-img head-img head-img head-img"/10% auto auto 10%;
 }
-header > a {
-  font-size: 30px;
-  font-weight: bold;
-}
-header a {
+section a {
   text-decoration: none;
   color: black;
 }
 
+#MyWork {
+  grid-area: My-work;
+  font-size: 30px;
+  font-weight: bold;
+  justify-self: center;
+}
+
 nav {
+  grid-area: menu;
+  justify-self: center;
+  font-size: 20px;
   display: flex;
   gap: 20px;
-  font-size: 18px;
-  /*インスタアイコン*/
 }
-nav img {
+
+#sns {
   width: 20px;
-  vertical-align: middle;
+  vertical-align: sub;
+}
+
+#header-img {
+  grid-area: head-img;
+  width: 100%;
 }
 
 main {
   grid-area: main;
-  display: flex;
-  flex-flow: row wrap;
 }
-main > img {
-  width: 100%;
-  justify-self: flex-start;
-}
-main h1 {
-  text-align: center;
-}
-main section {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-main section #first-li {
-  margin-bottom: 40px;
-}
-main section ul {
-  padding: 0;
-  list-style: none;
-}
-main section ul, main section p {
-  width: 80%;
-}
-main footer {
+
+footer {
   grid-area: foot;
 }
 /*# sourceMappingURL=copy_coding.SCSS.css.map */
