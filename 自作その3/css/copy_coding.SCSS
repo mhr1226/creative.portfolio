@@ -1,33 +1,36 @@
 @use "../../../default_mixin_setting/_main_mixin" as *;
 
 body{
+  @include space-setting(0,0);
   font-family: serif;
   display:grid;
   grid-template: 
-  "head" 
+  "head"
   "main" 
-  "foot"/1fr;
+  "foot";
   min-height:100vh;
 }
 
 header{
   grid-area:head;
+  display:grid;
+  grid-template:
+  ". ." 100px
+  "My-work head-nav"
+  ". ." 100px
+  "head-img head-img"
+  ". ." 60px
+
 }
 
-section{
-  display: grid;
-  align-items: center;
-  grid-template: 
-  ". . . . " 60px
-  "My-work My-work menu menu " 
-  ". . . . " 60px
-  "head-img head-img head-img head-img" 
-  /10% auto auto 10%; 
+#head-nav{
+  grid-area:head-nav;
+}
 
-  a {
-    text-decoration:none;
-    color:black;
-  }
+
+#MyWork,.menu{
+  text-decoration:none;
+  color:black;
 }
 
 #MyWork{
@@ -57,6 +60,58 @@ nav{
 
 main{
   grid-area:main;
+  display:grid;
+  grid-template:
+  "About"
+  "Works"
+  "News"
+  "Contact"
+}
+
+#About{
+  grid-area:About;
+  display:grid;
+  grid-template:
+  "." 60px
+  "About-h1" 
+  "About-ul" 
+  "About-p"
+  "." 60px;
+  row-gap:20px;
+  h1{
+    grid-area:About-h1;
+    justify-self: center;
+  }
+
+  ul{
+    grid-area:About-ul;
+    list-style:none;
+    padding-left:0;
+  }
+
+  #first-li{
+    margin-bottom:20px;
+  }
+
+  p,ul{
+    margin:0 15%;
+  }
+
+  p{
+    grid-area:About-p;
+  }
+}
+
+#Works{
+  grid-area:Works;
+}
+
+#News{
+  grid-area:News;
+}
+
+#Contact{
+  grid-area:Contact;
 }
 
 footer{
