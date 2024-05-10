@@ -117,6 +117,32 @@ main {
 
 #News {
   grid-area: News;
+  display: grid;
+  grid-template: ". News-h1. " ". News-dl. " ". . ." 40px/80px auto 80px;
+  justify-items: center;
+  align-items: center;
+  gap: 40px;
+}
+#News h1 {
+  grid-area: News-h1;
+}
+#News dl {
+  grid-area: News-dl;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#News #News-first-dr, #News #News-first-dt {
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+}
+#News .News-dr, #News .News-dt {
+  width: 20%;
+  border-bottom: solid 1px black;
+  padding: 15px;
+}
+#News .News-dt {
+  width: 70%;
 }
 
 #Contact {
