@@ -10,7 +10,7 @@ body {
 header {
   grid-area: head;
   display: grid;
-  grid-template: ". ." 100px "My-work head-nav" ". ." 100px "head-img head-img" ". ." 60px;
+  grid-template: ". ." 100px "My-work head-nav" ". ." 100px "head-img head-img" ". ." 40px;
 }
 
 #head-nav {
@@ -54,10 +54,11 @@ main {
   grid-template: "About" "Works" "News" "Contact";
 }
 
+/*About*/
 #About {
   grid-area: About;
   display: grid;
-  grid-template: "." 60px "About-h1" "About-ul" "About-p" "." 60px;
+  grid-template: "." 40px "About-h1" "About-ul" "About-p" "." 40px;
   row-gap: 20px;
 }
 #About h1 {
@@ -79,8 +80,39 @@ main {
   grid-area: About-p;
 }
 
+/*Works*/
 #Works {
   grid-area: Works;
+  display: grid;
+  grid-template: ". . . . ." 40px ". Works-h1 Works-h1 Works-h1 . " ". Works-img1 Works-img2 Works-img3 . " ". . . . ." 40px ". Works-img4 Works-img5 Works-img6 . " ". . . . ." 40px/100px auto auto auto 100px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  justify-items: center;
+}
+#Works h1 {
+  grid-area: Works-h1;
+  justify-self: center;
+}
+#Works img {
+  width: 100%;
+}
+#Works #Works-img1 {
+  grid-area: Works-img1;
+}
+#Works #Works-img2 {
+  grid-area: Works-img2;
+}
+#Works #Works-img3 {
+  grid-area: Works-img3;
+}
+#Works #Works-img4 {
+  grid-area: Works-img4;
+}
+#Works #Works-img5 {
+  grid-area: Works-img5;
+}
+#Works #Works-img6 {
+  grid-area: Works-img6;
 }
 
 #News {

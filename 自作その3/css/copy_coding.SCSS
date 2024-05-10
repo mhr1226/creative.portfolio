@@ -19,7 +19,7 @@ header{
   "My-work head-nav"
   ". ." 100px
   "head-img head-img"
-  ". ." 60px
+  ". ." 40px
 
 }
 
@@ -69,15 +69,16 @@ main{
   "Contact"
 }
 
+/*About*/
 #About{
   grid-area:About;
   display:grid;
   grid-template:
-  "." 60px
+  "." 40px
   "About-h1" 
   "About-ul" 
   "About-p"
-  "." 60px;
+  "." 40px;
   row-gap:20px;
   h1{
     grid-area:About-h1;
@@ -103,8 +104,46 @@ main{
   }
 }
 
+/*Works*/
 #Works{
   grid-area:Works;
+  display:grid;
+  grid-template:
+  ". . . . ." 40px
+
+  ". Works-h1 Works-h1 Works-h1 . " 
+
+  ". Works-img1 Works-img2 Works-img3 . " 
+
+  ". . . . ." 40px
+
+  ". Works-img4 Works-img5 Works-img6 . " 
+
+  ". . . . ." 40px
+  /100px auto auto auto 100px;
+  column-gap:40px;
+  justify-items:center;
+
+  h1{
+    grid-area:Works-h1;
+    justify-self:center;
+  }
+
+  img{
+    width:100%;
+  }
+
+  #Works-img1{grid-area:Works-img1;}
+
+  #Works-img2{grid-area:Works-img2;}
+
+  #Works-img3{grid-area:Works-img3;}
+
+  #Works-img4{grid-area:Works-img4;}
+
+  #Works-img5{grid-area:Works-img5;}
+
+  #Works-img6{grid-area:Works-img6;}
 }
 
 #News{
