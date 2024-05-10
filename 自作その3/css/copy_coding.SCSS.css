@@ -84,10 +84,10 @@ main {
 #Works {
   grid-area: Works;
   display: grid;
-  grid-template: ". . . . ." 40px ". Works-h1 Works-h1 Works-h1 . " ". Works-img1 Works-img2 Works-img3 . " ". . . . ." 40px ". Works-img4 Works-img5 Works-img6 . " ". . . . ." 40px/100px auto auto auto 100px;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  grid-template: ". Works-h1 Works-h1 Works-h1 . " ". Works-img1 Works-img2 Works-img3 . " ". Works-img4 Works-img5 Works-img6 . " ". . . . ." 40px/100px auto auto auto 100px;
+  gap: 40px;
   justify-items: center;
+  padding: 0;
 }
 #Works h1 {
   grid-area: Works-h1;
