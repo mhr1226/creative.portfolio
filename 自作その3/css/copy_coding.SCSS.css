@@ -84,7 +84,7 @@ main {
 #Works {
   grid-area: Works;
   display: grid;
-  grid-template: ". Works-h1 Works-h1 Works-h1 . " ". Works-img1 Works-img2 Works-img3 . " ". Works-img4 Works-img5 Works-img6 . " ". . . . ." 40px/100px auto auto auto 100px;
+  grid-template: ". Works-h1 Works-h1 Works-h1 . " ". Works-img1 Works-img2 Works-img3 . " ". Works-img4 Works-img5 Works-img6 . " ". . . . ." 40px/80px auto auto auto 80px;
   gap: 40px;
   justify-items: center;
   padding: 0;
@@ -147,6 +147,73 @@ main {
 
 #Contact {
   grid-area: Contact;
+  display: grid;
+  grid-template: ". contact-h1 ." ". contact-form ." ". . ." 20px/80px auto 80px;
+  gap: 40px;
+}
+#Contact h1 {
+  grid-area: contact-h1;
+  justify-self: center;
+}
+#Contact #contact-form {
+  grid-area: contact-form;
+  display: grid;
+  grid-template: "name1 span1 text1" "name2 span2 text2" "name3 span3 text3" ". . submit"/60px 60px auto;
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+}
+#Contact #contact-form #contact-label-1 {
+  grid-area: name1;
+}
+#Contact #contact-form #contact-label-2 {
+  grid-area: name2;
+}
+#Contact #contact-form #contact-label-3 {
+  grid-area: name3;
+}
+#Contact #contact-form #contact-span-1 {
+  grid-area: span1;
+}
+#Contact #contact-form #contact-span-2 {
+  grid-area: span2;
+}
+#Contact #contact-form #contact-span-3 {
+  grid-area: span3;
+}
+#Contact #contact-form #contact-text-1 {
+  grid-area: text1;
+}
+#Contact #contact-form #contact-text-2 {
+  grid-area: text2;
+}
+#Contact #contact-form #message-box {
+  grid-area: text3;
+  height: 150px;
+  width: 80%;
+}
+#Contact #contact-form button {
+  grid-area: submit;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  justify-self: center;
+  height: 40px;
+  width: 25%;
+}
+#Contact #contact-form .contact-label, #Contact #contact-form .contact-span {
+  font-weight: bold;
+}
+#Contact #contact-form .contact-span {
+  color: red;
+}
+#Contact #contact-form .textbox {
+  height: 40px;
+  width: 80%;
+}
+#Contact #contact-form .textbox, #Contact #contact-form #message-box, #Contact #contact-form button {
+  position: relative;
+  right: 10%;
 }
 
 footer {

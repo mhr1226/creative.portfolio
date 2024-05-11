@@ -74,6 +74,49 @@
     </section>
     <section id="Contact">
       <h1>Contact</h1>
+      <form id="contact-form">
+        <!-- 名前 -->
+        <label for="name" 
+        id="contact-label-1" class="contact-label">
+          NAME
+        </label>
+        
+        <span id="contact-span-1" class="contact-span">
+          必須
+        </span>
+        
+        <input type="text" 
+        id="contact-text-1" class="textbox" name="name" 
+        placeholder="お名前を入力してください">
+
+        <!-- メールアドレス -->
+        <label for="e-mail" 
+        id="contact-label-2" class="contact-label">
+          E-mail
+        </label>
+        <span id="contact-span-2" class="contact-span">
+          必須
+        </span>
+        
+        <input type="text" 
+        id="contact-text-2" 
+        class="textbox" name="e-mail"
+        placeholder="メールアドレスを入力してください">
+        <!-- お問い合わせ内容 -->
+        <label for="message-box" 
+        id="contact-label-3"  class="contact-label">
+          MESSAGE
+      </label>
+      
+      <span id="contact-span-3" class="contact-span">
+        必須
+      </span>
+      
+      <textarea name="contact-text" 
+      id="message-box" 
+      placeholder="お問い合わせ内容を記入してください"></textarea>
+      <button type="submit">送信</button>
+    </form>
     </section>
   </main>
   <!-- フッター -->
