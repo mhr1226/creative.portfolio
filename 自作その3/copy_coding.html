@@ -73,6 +73,7 @@
       </dl>
     </section>
     <section id="Contact">
+      <div>
       <h1>Contact</h1>
       <form id="contact-form">
         <!-- 名前 -->
@@ -80,10 +81,6 @@
         id="contact-label-1" class="contact-label">
           NAME
         </label>
-        
-        <span id="contact-span-1" class="contact-span">
-          必須
-        </span>
         
         <input type="text" 
         id="contact-text-1" class="textbox" name="name" 
@@ -94,9 +91,6 @@
         id="contact-label-2" class="contact-label">
           E-mail
         </label>
-        <span id="contact-span-2" class="contact-span">
-          必須
-        </span>
         
         <input type="text" 
         id="contact-text-2" 
@@ -104,19 +98,18 @@
         placeholder="メールアドレスを入力してください">
         <!-- お問い合わせ内容 -->
         <label for="message-box" 
-        id="contact-label-3"  class="contact-label">
+        id="contact-label-3">
           MESSAGE
       </label>
-      
-      <span id="contact-span-3" class="contact-span">
-        必須
-      </span>
       
       <textarea name="contact-text" 
       id="message-box" 
       placeholder="お問い合わせ内容を記入してください"></textarea>
+      <div id="submit">
       <button type="submit">送信</button>
+      </div>
     </form>
+  </div>
     </section>
   </main>
   <!-- フッター -->

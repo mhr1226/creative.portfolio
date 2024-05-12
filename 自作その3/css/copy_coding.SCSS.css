@@ -146,74 +146,52 @@ main {
 }
 
 #Contact {
-  grid-area: Contact;
   display: grid;
-  grid-template: ". contact-h1 ." ". contact-form ." ". . ." 20px/80px auto 80px;
+  grid-template: ". contact-box. " ". . ." 40px/80px auto 80px;
+  justify-items: center;
+}
+#Contact div {
+  grid-area: contact-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 40px;
 }
-#Contact h1 {
-  grid-area: contact-h1;
-  justify-self: center;
+#Contact div h1 {
+  width: 100%;
+  text-align: center;
 }
-#Contact #contact-form {
-  grid-area: contact-form;
-  display: grid;
-  grid-template: "name1 span1 text1" "name2 span2 text2" "name3 span3 text3" ". . submit"/60px 60px auto;
-  justify-items: center;
-  align-items: center;
-  gap: 20px;
+#Contact div #contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  gap: 10px;
+  margin: 1% 0;
 }
-#Contact #contact-form #contact-label-1 {
-  grid-area: name1;
+#Contact div #contact-form .textbox {
+  height: 40px;
+  width: 80%;
 }
-#Contact #contact-form #contact-label-2 {
-  grid-area: name2;
-}
-#Contact #contact-form #contact-label-3 {
-  grid-area: name3;
-}
-#Contact #contact-form #contact-span-1 {
-  grid-area: span1;
-}
-#Contact #contact-form #contact-span-2 {
-  grid-area: span2;
-}
-#Contact #contact-form #contact-span-3 {
-  grid-area: span3;
-}
-#Contact #contact-form #contact-text-1 {
-  grid-area: text1;
-}
-#Contact #contact-form #contact-text-2 {
-  grid-area: text2;
-}
-#Contact #contact-form #message-box {
-  grid-area: text3;
+#Contact #message-box {
   height: 150px;
   width: 80%;
 }
-#Contact #contact-form button {
-  grid-area: submit;
+#Contact #submit {
+  width: 100%;
+}
+#Contact #submit button {
   font-size: 20px;
   background-color: black;
   color: white;
-  justify-self: center;
-  height: 40px;
-  width: 25%;
+  width: 15%;
 }
-#Contact #contact-form .contact-label, #Contact #contact-form .contact-span {
+#Contact .contact-label, #Contact #contact-label-3 {
+  width: 15%;
+}
+#Contact .contact-label, #Contact #contact-label-3 {
   font-weight: bold;
-}
-#Contact #contact-form .contact-span {
-  color: red;
-}
-#Contact #contact-form .textbox {
-  height: 40px;
-  width: 80%;
-}
-#Contact #contact-form .textbox, #Contact #contact-form #message-box, #Contact #contact-form button {
-  position: relative;
-  right: 10%;
 }
 
 footer {
