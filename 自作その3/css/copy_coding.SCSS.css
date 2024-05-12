@@ -1,3 +1,12 @@
+@charset "UTF-8";
+/*body用のgirdレイアウト*/
+.body-grid {
+  display: grid;
+  grid-template: "head" "main" "foot";
+  min-height: 100vh;
+}
+
+/*共通のCSS*/
 body {
   margin: 0;
   padding: 0;
@@ -7,10 +16,14 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  text-align: center;
+}
+
 header {
   grid-area: head;
   display: grid;
-  grid-template: ". ." 100px "My-work head-nav" ". ." 100px "head-img head-img" ". ." 40px;
+  grid-template: ". ." 100px "My-work head-nav" ". ." 100px "head-img head-img" ". ." 20px;
 }
 
 #head-nav {
@@ -58,12 +71,11 @@ main {
 #About {
   grid-area: About;
   display: grid;
-  grid-template: "." 40px "About-h1" "About-ul" "About-p" "." 40px;
+  grid-template: "." 20px "About-h1" "About-ul" "About-p" "." 20px;
   row-gap: 20px;
 }
 #About h1 {
   grid-area: About-h1;
-  justify-self: center;
 }
 #About ul {
   grid-area: About-ul;
@@ -84,14 +96,13 @@ main {
 #Works {
   grid-area: Works;
   display: grid;
-  grid-template: ". Works-h1 Works-h1 Works-h1 . " ". Works-img1 Works-img2 Works-img3 . " ". Works-img4 Works-img5 Works-img6 . " ". . . . ." 40px/80px auto auto auto 80px;
-  gap: 40px;
+  grid-template: ". Works-h1 Works-h1 Works-h1 . " ". Works-img1 Works-img2 Works-img3 . " ". Works-img4 Works-img5 Works-img6 . " ". . . . ." 20px/40px auto auto auto 40px;
+  gap: 20px;
   justify-items: center;
   padding: 0;
 }
 #Works h1 {
   grid-area: Works-h1;
-  justify-self: center;
 }
 #Works img {
   width: 100%;
@@ -118,10 +129,10 @@ main {
 #News {
   grid-area: News;
   display: grid;
-  grid-template: ". News-h1. " ". News-dl. " ". . ." 40px/80px auto 80px;
+  grid-template: ". News-h1. " ". News-dl. " ". . ." 20px/40px auto 40px;
   justify-items: center;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 #News h1 {
   grid-area: News-h1;
@@ -147,7 +158,7 @@ main {
 
 #Contact {
   display: grid;
-  grid-template: ". contact-box. " ". . ." 40px/80px auto 80px;
+  grid-template: ". contact-box. " ". . ." 20px/40px auto 40px;
   justify-items: center;
 }
 #Contact div {
@@ -156,11 +167,10 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 #Contact div h1 {
   width: 100%;
-  text-align: center;
 }
 #Contact div #contact-form {
   display: flex;
@@ -196,5 +206,53 @@ main {
 
 footer {
   grid-area: foot;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    grid-template: ". ." 50px "My-work My-work" ". ." 20px "head-nav head-nav" ". ." 50px "head-img head-img" ". ." 10px;
+  }
+  #About {
+    grid-template: "." 10px "About-h1" "About-ul" "About-p" "." 10px;
+    row-gap: 10px;
+  }
+  #About ul, #About p {
+    margin: 0 5%;
+  }
+  #Works {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 20px;
+  }
+  #News {
+    grid-template: ". News-h1. " ". News-dl. " ". . ." 10px/20px auto 20px;
+    gap: 10px;
+  }
+  #News .News-dr, #News .News-dt {
+    padding: 10px;
+  }
+  #News .News-dr {
+    width: 100px;
+    text-align: center;
+  }
+  #Contact {
+    grid-template: ". contact-box. " ". . ." 10px/20px auto 20px;
+  }
+  #Contact .contact-label, #Contact #contact-label-3 {
+    width: 50%;
+    text-align: center;
+  }
+  #Contact #submit button {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 599px) {
+  #News #News-first-dr {
+    border: none;
+  }
+  #News .News-dr {
+    width: 70%;
+  }
 }
 /*# sourceMappingURL=copy_coding.SCSS.css.map */

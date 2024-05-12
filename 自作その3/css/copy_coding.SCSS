@@ -1,5 +1,6 @@
 @use "../../../default_mixin_setting/_main_mixin" as *;
 
+/*共通のCSS*/
 body{
   @include space-setting(0,0);
   font-family: serif;
@@ -9,6 +10,11 @@ body{
   "main" 
   "foot";
   min-height:100vh;
+
+}
+
+h1{
+  text-align:center;
 }
 
 header{
@@ -19,7 +25,7 @@ header{
   "My-work head-nav"
   ". ." 100px
   "head-img head-img"
-  ". ." 40px
+  ". ." 20px
 
 }
 
@@ -74,15 +80,14 @@ main{
   grid-area:About;
   display:grid;
   grid-template:
-  "." 40px
+  "." 20px
   "About-h1" 
   "About-ul" 
   "About-p"
-  "." 40px;
+  "." 20px;
   row-gap:20px;
   h1{
     grid-area:About-h1;
-    justify-self: center;
   }
 
   ul{
@@ -116,15 +121,14 @@ main{
 
   ". Works-img4 Works-img5 Works-img6 . " 
 
-  ". . . . ." 40px
-  /80px auto auto auto 80px;
-  gap:40px;
+  ". . . . ." 20px
+  /40px auto auto auto 40px;
+  gap:20px;
   justify-items:center;
   padding:0;
 
   h1{
     grid-area:Works-h1;
-    justify-self:center;
   }
 
   img{
@@ -150,11 +154,11 @@ main{
   grid-template:
   ". News-h1. "
   ". News-dl. "
-  ". . ." 40px
-  /80px auto 80px;
+  ". . ." 20px
+  /40px auto 40px;
   justify-items: center;
   align-items:center;
-  gap:40px;
+  gap:20px;
   
 h1{
   grid-area:News-h1;
@@ -189,8 +193,8 @@ h1{
   display:grid;
   grid-template:
   ". contact-box. " 
-  ". . ." 40px
-  /80px auto 80px;
+  ". . ." 20px
+  /40px auto 40px;
   justify-items:center;
 
   div{
@@ -199,13 +203,12 @@ h1{
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
-    gap:40px;
+    gap:20px;
 
 
 
     h1{
       width:100%;
-      text-align:center;
     }
 
     #contact-form{
@@ -253,4 +256,96 @@ h1{
 
 footer{
   grid-area:foot;
+}
+
+@media screen and(max-width:767px){
+header{
+  grid-template:
+  ". ." 50px
+  "My-work My-work"
+  ". ." 20px
+  "head-nav head-nav"
+  ". ."50px
+  "head-img head-img"
+  ". ." 10px;
+}
+
+  #About{
+  grid-template:
+  "." 10px
+  "About-h1" 
+  "About-ul" 
+  "About-p"
+  "." 10px;
+  row-gap:10px;
+
+  ul,p{
+    margin:0 5%;
+  }
+}
+
+#Works{
+  display:flex;
+  flex-direction:column;
+  margin:20px;
+  gap:20px
+}
+
+#News{
+  grid-template:
+  ". News-h1. "
+  ". News-dl. "
+  ". . ." 10px
+  /20px auto 20px;
+  gap:10px;
+
+.News-dr,.News-dt{
+  padding:10px;
+}
+
+.News-dr{
+  width:100px;
+  text-align:center;
+}
+}
+
+#Contact{
+  grid-template:
+  ". contact-box. " 
+  ". . ." 10px
+  /20px auto 20px;
+
+  .contact-label,#contact-label-3{
+    width:50%;
+    text-align: center;
+  }
+
+  #submit{
+    button{
+    width:20%;
+
+  }
+  }
+  
+}
+
+
+@media screen and(max-width:599px){
+  
+  
+  #News{
+  #News-first-dr{
+    border:none;
+}
+
+.News-dr{
+  width:70%;
+}
+
+
+
+
+
+}
+}
 }
