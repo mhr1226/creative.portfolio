@@ -21,12 +21,11 @@ header{
   grid-area:head;
   display:grid;
   grid-template:
-  ". ." 100px
   "My-work head-nav"
-  ". ." 100px
-  "head-img head-img"
-  ". ." 20px
-
+  "head-img head-img";
+  margin:100px 0 20px 0;
+  row-gap:100px;
+  text-align:center;
 }
 
 #head-nav{
@@ -43,21 +42,20 @@ header{
   grid-area: My-work;
   font-size:30px;
   font-weight:bold;
-  justify-self: center;
 }
 
 nav{
   grid-area: menu;
-  justify-self: center;
-  align-self:center;
   font-size:20px;
   display:flex;
   gap:20px;
-}
+  justify-content:center;
+  align-items:center;
 
-#sns{
+  img{
   width:20px;
   vertical-align: sub;
+  }
 }
 
 #header-img{
@@ -80,12 +78,11 @@ main{
   grid-area:About;
   display:grid;
   grid-template:
-  "." 20px
   "About-h1" 
   "About-ul" 
-  "About-p"
-  "." 20px;
+  "About-p";
   row-gap:20px;
+  margin:20px 15% 20px 15%;
   h1{
     grid-area:About-h1;
   }
@@ -94,14 +91,10 @@ main{
     grid-area:About-ul;
     list-style:none;
     padding-left:0;
-  }
 
-  #first-li{
-    margin-bottom:20px;
-  }
-
-  p,ul{
-    margin:0 15%;
+    > li{
+      margin-bottom:20px;
+    }
   }
 
   p{
@@ -115,16 +108,13 @@ main{
   display:grid;
   grid-template:
 
-  ". Works-h1 Works-h1 Works-h1 . " 
+  "Works-h1 Works-h1 Works-h1" 
 
-  ". Works-img1 Works-img2 Works-img3 . " 
+  "Works-img1 Works-img2 Works-img3" 
 
-  ". Works-img4 Works-img5 Works-img6 . " 
-
-  ". . . . ." 20px
-  /40px auto auto auto 40px;
+  "Works-img4 Works-img5 Works-img6" ;
+  margin:auto 40px 20px 40px;
   gap:20px;
-  justify-items:center;
   padding:0;
 
   h1{
@@ -134,30 +124,22 @@ main{
   img{
     width:100%;
   }
-
-  #Works-img1{grid-area:Works-img1;}
-
-  #Works-img2{grid-area:Works-img2;}
-
-  #Works-img3{grid-area:Works-img3;}
-
-  #Works-img4{grid-area:Works-img4;}
-
-  #Works-img5{grid-area:Works-img5;}
-
-  #Works-img6{grid-area:Works-img6;}
+  
 }
+
+@for $i from 1 through 6{
+    #Works-img#{$i}{
+      grid-area:Works-img#{$i};
+    }
+  }
 
 #News{
   grid-area:News;
   display:grid;
   grid-template:
-  ". News-h1. "
-  ". News-dl. "
-  ". . ." 20px
-  /40px auto 40px;
-  justify-items: center;
-  align-items:center;
+  "News-h1"
+  "News-dl";
+  margin:auto 40px 20px 40px;
   gap:20px;
   
 h1{
@@ -166,9 +148,7 @@ h1{
 
   dl{
     grid-area:News-dl;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+    @include flex-df-setting(flex,wrap,center);
   }
 
   #News-first-dr,#News-first-dt{
@@ -192,67 +172,50 @@ h1{
 
   display:grid;
   grid-template:
-  ". contact-box. " 
-  ". . ." 20px
-  /40px auto 40px;
-  justify-items:center;
+  "contact-box" ;
+  margin:auto 40px 20px 40px;
 
   div{
     grid-area:contact-box;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
+    @include flex-df-setting(flex,wrap);
     gap:20px;
-
-
-
+    width:100%;
     h1{
       width:100%;
     }
-
-    #contact-form{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content: space-around;
-      align-content:center;
+  }
+  
+  #contact-form{
+      @include flex-df-setting(flex,wrap,space-around,center);
       gap:10px;
       margin:1% 0;
-
-      .textbox{
-            height:40px;
-            width:80%;
-          }
-      
+      width:100%;
     }
-  }
+
+    label{
+      font-weight:bold;
+      width:10%;
+      align-self:start;
+    }
+
+    .textbox{
+      height:40px;
+      width:85%;
+    }
 
     #message-box{
       height:150px;
-      width:80%;
+      width:85%;
     }
 
-    #submit{
-      width:100%;
       button{
       font-size:20px;
       background-color:black;
       color:white;
-      width:15%;
-    }
-    }
-
-    .contact-label,#contact-label-3{
-      width:15%;
-    }
-
-    .contact-label,#contact-label-3{
-      font-weight:bold;
+      width:35%;
     }
 
   }
-
-
 
 footer{
   grid-area:foot;
@@ -261,23 +224,20 @@ footer{
 @media screen and(max-width:767px){
 header{
   grid-template:
-  ". ." 50px
   "My-work My-work"
-  ". ." 20px
   "head-nav head-nav"
-  ". ."50px
-  "head-img head-img"
-  ". ." 10px;
+  "head-img head-img";
+  row-gap:35px;
+  margin:50px auto 10px auto;
 }
 
   #About{
   grid-template:
-  "." 10px
   "About-h1" 
   "About-ul" 
-  "About-p"
-  "." 10px;
+  "About-p";
   row-gap:10px;
+  margin:10px auto 10px auto;
 
   ul,p{
     margin:0 5%;
@@ -293,37 +253,31 @@ header{
 
 #News{
   grid-template:
-  ". News-h1. "
-  ". News-dl. "
-  ". . ." 10px
-  /20px auto 20px;
+  "News-h1"
+  "News-dl";
   gap:10px;
+  margin:auto 20px auto 20px;
+  text-align: center;
+
+}
 
 .News-dr,.News-dt{
   padding:10px;
 }
 
-.News-dr{
-  width:100px;
-  text-align:center;
-}
-}
-
 #Contact{
   grid-template:
-  ". contact-box. " 
-  ". . ." 10px
-  /20px auto 20px;
-
-  .contact-label,#contact-label-3{
-    width:50%;
+    "contact-box";
+    margin:auto 20px 10px 20px;
     text-align: center;
+
+  label{
+    width:50%;
   }
 
   #submit{
     button{
     width:20%;
-
   }
   }
   
@@ -336,16 +290,10 @@ header{
   #News{
   #News-first-dr{
     border:none;
-}
-
+    }
 .News-dr{
   width:70%;
-}
-
-
-
-
-
+  }
 }
 }
 }

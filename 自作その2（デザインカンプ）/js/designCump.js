@@ -101,6 +101,14 @@ accountData.name = 'ひろ';
 
 console.log(accountData.name);  
 
+const Profile1 = () =>{
+  console.log('こんにちは！');
+  console.log('私の名前はまひろです！');
+  console.log('よろしくお願いいたします！');
+}
+
+Profile1();
+
 
 
 
