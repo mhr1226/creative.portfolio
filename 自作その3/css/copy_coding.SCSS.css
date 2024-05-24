@@ -161,6 +161,7 @@ main {
 }
 
 #Contact {
+  grid-area: Contact;
   display: grid;
   grid-template: "contact-box";
   margin: auto 40px 20px 40px;
@@ -206,6 +207,25 @@ main {
 
 footer {
   grid-area: foot;
+}
+
+#BackToHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 10px;
+  color: white;
+  border-radius: 50%;
+  position: fixed;
+  background-color: skyblue;
+  right: 3px;
+  bottom: 3px;
+  text-decoration: none;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  opacity: 0;
 }
 
 @media screen and (max-width: 767px) {
