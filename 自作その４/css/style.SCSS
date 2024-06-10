@@ -1,5 +1,88 @@
+@use "../../../default_mixin_setting/_main_mixin";
+
+body{
+  font-size:1rem;
+  min-height:100vh;
+  display:grid;
+  grid-template:
+  ".... .... ...." 30px
+  "head head head" 
+  "main main main"
+  "foot foot foot";
+}
+
 header{
+  grid-area:head;
+  display:grid;
+  grid-template:
+  "logo logo logo"
+  "navi  navi  navi ";
+  gap:20px;
+
   > a{
-    font-size:30px;
+    font-size:2rem;
+    grid-area:logo;
+    text-decoration:none;
+    color:black;
+    margin-left:30px;
   }
+
+  a{
+    text-decoration:none;
+  }
+
+  nav {
+    grid-area:navi;
+    background-color:#333333;
+    padding:10px 0 10px 30px;
+    display:flex;
+    gap:20px;
+    
+    >a{
+      color:white;
+      font-size:1rem;
+    }
+    
+  }
+}
+
+
+main{
+  grid-area:main;
+  grid-template:
+  "sec-top sec-top"
+  "sec1    aside  "
+  "sec2    aside  "
+  "sec3    aside  ";
+  margin:30px 50px;
+  display:grid;
+  gap:30px;
+}
+
+#section-top{
+  grid-area:sec-top;
+}
+
+#section1{
+  grid-area:sec1;
+}
+
+#section2{
+  grid-area:sec2;
+}
+
+#section3{
+  grid-area:sec3;
+}
+
+aside{
+  grid-area:aside;
+}
+
+
+
+
+
+footer{
+  grid-area:foot;
 }

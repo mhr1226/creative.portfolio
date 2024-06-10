@@ -1,4 +1,75 @@
+@charset "UTF-8";
+/*body用のgirdレイアウト*/
+.body-grid {
+  display: grid;
+  grid-template: "head" "main" "foot";
+  min-height: 100vh;
+}
+
+body {
+  font-size: 1rem;
+  min-height: 100vh;
+  display: grid;
+  grid-template: ".... .... ...." 30px "head head head" "main main main" "foot foot foot";
+}
+
+header {
+  grid-area: head;
+  display: grid;
+  grid-template: "logo logo logo" "navi  navi  navi ";
+  gap: 20px;
+}
 header > a {
-  font-size: 30px;
+  font-size: 2rem;
+  grid-area: logo;
+  text-decoration: none;
+  color: black;
+  margin-left: 30px;
+}
+header a {
+  text-decoration: none;
+}
+header nav {
+  grid-area: navi;
+  background-color: #333333;
+  padding: 10px 0 10px 30px;
+  display: flex;
+  gap: 20px;
+}
+header nav > a {
+  color: white;
+  font-size: 1rem;
+}
+
+main {
+  grid-area: main;
+  grid-template: "sec-top sec-top" "sec1    aside  " "sec2    aside  " "sec3    aside  ";
+  margin: 30px 50px;
+  display: grid;
+  gap: 30px;
+}
+
+#section-top {
+  grid-area: sec-top;
+}
+
+#section1 {
+  grid-area: sec1;
+}
+
+#section2 {
+  grid-area: sec2;
+}
+
+#section3 {
+  grid-area: sec3;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: foot;
 }
 /*# sourceMappingURL=style.SCSS.css.map */
