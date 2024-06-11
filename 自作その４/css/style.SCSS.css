@@ -10,7 +10,11 @@ body {
   font-size: 1rem;
   min-height: 100vh;
   display: grid;
-  grid-template: ".... .... ...." 30px "head head head" "main main main" "foot foot foot";
+  grid-template: ".... .... ...." 10px "head head head" "main main main" 2fr "foot foot foot";
+}
+
+h2 {
+  font-size: 1.05rem;
 }
 
 header {
@@ -20,7 +24,7 @@ header {
   gap: 20px;
 }
 header > a {
-  font-size: 2rem;
+  font-size: 1.9rem;
   grid-area: logo;
   text-decoration: none;
   color: black;
@@ -34,7 +38,7 @@ header nav {
   background-color: #333333;
   padding: 10px 0 10px 30px;
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
 }
 header nav > a {
   color: white;
@@ -43,14 +47,18 @@ header nav > a {
 
 main {
   grid-area: main;
-  grid-template: "sec-top sec-top" "sec1    aside  " "sec2    aside  " "sec3    aside  ";
-  margin: 30px 50px;
+  grid-template: "..... .....   .....   ....." 1.5rem "..... sec-top sec-top ....." "..... sec1    aside   ....." "..... sec2    aside   ....." "..... sec3    aside   ....." "..... .....   .....   ....." 1rem/2rem 3fr 1.6fr 2rem;
   display: grid;
-  gap: 30px;
+  gap: 3rem 0;
+}
+main img {
+  width: 100%;
 }
 
 #section-top {
   grid-area: sec-top;
+  display: flex;
+  gap: 0 1rem;
 }
 
 #section1 {
@@ -67,6 +75,27 @@ main {
 
 aside {
   grid-area: aside;
+  margin: 1rem auto auto 2rem;
+  display: grid;
+  row-gap: 2.5rem;
+  justify-items: center;
+}
+aside h2 {
+  text-align: center;
+}
+
+#aside-section1 > div {
+  margin: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+#aside-section1 img {
+  width: 50%;
+  border-radius: 50%;
+}
+
+#aside-section3 p {
+  margin: 1.5rem;
 }
 
 footer {
