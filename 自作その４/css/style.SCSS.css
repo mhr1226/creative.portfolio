@@ -10,7 +10,12 @@ body {
   font-size: 1rem;
   min-height: 100vh;
   display: grid;
-  grid-template: ".... .... ...." 10px "head head head" "main main main" 2fr "foot foot foot";
+  grid-template: " head head head head" ".... ....  .... ...." 3rem ".... main aside ...." ".... foot foot  ...."/2rem 2fr 1fr 2rem;
+  margin: 0;
+  padding: 0;
+}
+body img {
+  width: 100%;
 }
 
 h2 {
@@ -20,15 +25,15 @@ h2 {
 header {
   grid-area: head;
   display: grid;
-  grid-template: "logo logo logo" "navi  navi  navi ";
-  gap: 20px;
+  grid-template: ".... logo    logo" "navi navi    navi" ".... ....    ...." 1.5rem ".... sec-top ...."/2rem 1fr 2rem;
+  row-gap: 1rem;
+  margin-top: 1rem;
 }
 header > a {
   font-size: 1.9rem;
   grid-area: logo;
   text-decoration: none;
   color: black;
-  margin-left: 30px;
 }
 header a {
   text-decoration: none;
@@ -45,20 +50,15 @@ header nav > a {
   font-size: 1rem;
 }
 
-main {
-  grid-area: main;
-  grid-template: "..... .....   .....   ....." 1.5rem "..... sec-top sec-top ....." "..... sec1    aside   ....." "..... sec2    aside   ....." "..... sec3    aside   ....." "..... .....   .....   ....." 1rem/2rem 3fr 1.6fr 2rem;
-  display: grid;
-  gap: 3rem 0;
-}
-main img {
-  width: 100%;
-}
-
 #section-top {
   grid-area: sec-top;
   display: flex;
-  gap: 0 1rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
+main {
+  grid-area: main;
 }
 
 #section1 {
@@ -75,18 +75,29 @@ main img {
 
 aside {
   grid-area: aside;
-  margin: 1rem auto auto 2rem;
   display: grid;
-  row-gap: 2.5rem;
-  justify-items: center;
+  margin: 2rem 0 2rem 2rem;
+  row-gap: 2rem;
+  font-size: 0.9rem;
+}
+aside h2, aside p {
+  margin: 0;
 }
 aside h2 {
   text-align: center;
 }
+aside p {
+  margin-bottom: 1rem;
+}
+
+#aside-section1, #aside-section2, #aside-section3 {
+  display: grid;
+  row-gap: 1rem;
+}
 
 #aside-section1 > div {
-  margin: 1.5rem;
   display: grid;
+  row-gap: 1rem;
   place-items: center;
 }
 #aside-section1 img {
@@ -95,7 +106,15 @@ aside h2 {
 }
 
 #aside-section3 p {
-  margin: 1.5rem;
+  margin: 0;
+  padding: 1rem;
+}
+#aside-section3 #first-border {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+#aside-section3 .others-border {
+  border-bottom: 1px solid black;
 }
 
 footer {
