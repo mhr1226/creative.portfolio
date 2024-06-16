@@ -5,10 +5,12 @@ body{
   min-height:100vh;
   display:grid;
   grid-template:
-  " head head head head" 
-  ".... ....  .... ...." 3rem
-  ".... main aside ...." 
-  ".... foot foot  ...."
+  " head  head   head   head  " 
+  "....   ....   ....   ....  " 3rem
+  "....   main   aside  ....  "
+  "....   ....   ....   ....  "3rem
+  "foot   foot   foot   foot  "
+  "copy-r copy-r copy-r copy-r"
   /2rem 2fr 1fr 2rem;
     
   @include space-setting(0,0);
@@ -42,6 +44,10 @@ header{
 
   a{
     text-decoration:none;
+
+    &:hover{
+      text-decoration: underline;
+    }
   }
 
   nav {
@@ -67,8 +73,23 @@ header{
 
 main{
   grid-area:main;
+  .main-text{
+    // text-align:center;
+    margin:2rem;
+  }
 }
 
+
+.read-more{
+  text-decoration:none;
+  color:black;
+  display:grid;
+  justify-content:center;
+
+  &:hover{
+    text-decoration:underline;
+  }
+}
 
 
 #section1{
@@ -139,4 +160,32 @@ aside{
 
 footer{
   grid-area:foot;
+  background-color:#F7F7F7;
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  section{
+    width:30%;
+  }
+  
+  .a-block{
+    display:block;
+  }
+}
+
+#foot-section1{
+  
+  a{
+    padding:0.25rem;
+    &::before{
+      content:"\25B6";
+      color:black;
+    }
+  }
+}
+
+#copy-right{
+  grid-area:copy-r;
+  text-align:center;
+  font-size:0.80rem;
 }

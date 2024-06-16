@@ -52,9 +52,11 @@ nav {
   justify-content: center;
   align-items: center;
 }
-nav img {
+nav .menu {
+  display: flex;
+}
+nav .menu img {
   width: 20px;
-  vertical-align: sub;
 }
 
 #header-img {
@@ -148,12 +150,12 @@ main {
   justify-content: center;
 }
 #News #News-first-dr, #News #News-first-dt {
-  border-top: solid 1px black;
-  border-bottom: solid 1px black;
+  border-top: solid 1px rgb(242, 231, 231);
+  border-bottom: solid 1px rgb(242, 231, 231);
 }
 #News .News-dr, #News .News-dt {
   width: 20%;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px rgb(242, 231, 231);
   padding: 15px;
 }
 #News .News-dt {

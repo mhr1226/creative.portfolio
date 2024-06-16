@@ -10,7 +10,7 @@ body {
   font-size: 1rem;
   min-height: 100vh;
   display: grid;
-  grid-template: " head head head head" ".... ....  .... ...." 3rem ".... main aside ...." ".... foot foot  ...."/2rem 2fr 1fr 2rem;
+  grid-template: " head  head   head   head  " "....   ....   ....   ....  " 3rem "....   main   aside  ....  " "....   ....   ....   ....  " 3rem "foot   foot   foot   foot  " "copy-r copy-r copy-r copy-r"/2rem 2fr 1fr 2rem;
   margin: 0;
   padding: 0;
 }
@@ -38,6 +38,9 @@ header > a {
 header a {
   text-decoration: none;
 }
+header a:hover {
+  text-decoration: underline;
+}
 header nav {
   grid-area: navi;
   background-color: #333333;
@@ -59,6 +62,19 @@ header nav > a {
 
 main {
   grid-area: main;
+}
+main .main-text {
+  margin: 2rem;
+}
+
+.read-more {
+  text-decoration: none;
+  color: black;
+  display: grid;
+  justify-content: center;
+}
+.read-more:hover {
+  text-decoration: underline;
 }
 
 #section1 {
@@ -119,5 +135,29 @@ aside p {
 
 footer {
   grid-area: foot;
+  background-color: #F7F7F7;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+footer section {
+  width: 30%;
+}
+footer .a-block {
+  display: block;
+}
+
+#foot-section1 a {
+  padding: 0.25rem;
+}
+#foot-section1 a::before {
+  content: "▶";
+  color: black;
+}
+
+#copy-right {
+  grid-area: copy-r;
+  text-align: center;
+  font-size: 0.8rem;
 }
 /*# sourceMappingURL=style.SCSS.css.map */
