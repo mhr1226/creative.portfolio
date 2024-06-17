@@ -17,11 +17,33 @@ body{
   img{
     width:100%;
   }
+
+  .a-block{
+    display:block;
+  }
+
+
+  #first-border{
+    padding:1.5rem;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+  }
+
+  .others-border{
+    padding:1.5rem;
+    border-bottom:1px solid black;
+  }
+
+  a{
+    text-decoration:none;
+    color:black;
+  }
 }
 
 h2{
-  font-size:1.05rem;
+  font-size:1.25rem;
 }
+
 
 header{
   grid-area:head;
@@ -38,15 +60,30 @@ header{
   > a{
     font-size:1.90rem;
     grid-area:logo;
-    text-decoration:none;
-    color:black;
   }
 
+  nav{
+    position:relative;
+  }
+
+  // ホバー時の処理をJSで操作練習※後日
+  // .sub-text1{
+  //   display:none;
+  //   background-color:#eae4e4;
+  //   color:black;
+  //   position:absolute;
+  //   top:30px;
+  //   left:30px;
+  // }
+
   a{
-    text-decoration:none;
 
     &:hover{
       text-decoration: underline;
+
+      // .subtext1{
+      //   display:block;
+      // }
     }
   }
 
@@ -73,6 +110,7 @@ header{
 
 main{
   grid-area:main;
+  margin-bottom:15rem;
   .main-text{
     // text-align:center;
     margin:2rem;
@@ -81,14 +119,13 @@ main{
 
 
 .read-more{
-  text-decoration:none;
-  color:black;
   display:grid;
   justify-content:center;
 
-  &:hover{
-    text-decoration:underline;
-  }
+  // ホバー時に線を表示する
+  // &:hover{
+  //   text-decoration:underline;
+  // }
 }
 
 
@@ -123,7 +160,7 @@ aside{
   }
 }
 
-#aside-section1,#aside-section2,#aside-section3{
+#aside-section1,#aside-section2{
   display:grid;
   row-gap:1rem;
 }
@@ -141,51 +178,53 @@ aside{
 }
 
 #aside-section3{
-  p{
-    @include space-setting(0,1rem);
-  }
-
-
-  #first-border{
-    border-top:1px solid black;
-    border-bottom:1px solid black;
-  }
-
-  .others-border{
-    border-bottom:1px solid black;
+  h2{
+    margin-bottom:2rem;
   }
 }
 
 
-
+footer,#copy-right{
+  background-color:#F7F7F7;
+}
 footer{
   grid-area:foot;
-  background-color:#F7F7F7;
+  @include space-setting(4rem 0 0 0,2rem);
   display:flex;
-  justify-content:center;
+  justify-content:space-between;
   gap:1rem;
   section{
     width:30%;
   }
-  
-  .a-block{
-    display:block;
+
+  h2{
+    margin-bottom:2rem;
   }
 }
 
 #foot-section1{
-  
   a{
+    font-size:15px;
     padding:0.25rem;
     &::before{
       content:"\25B6";
       color:black;
     }
   }
+
 }
+
+#foot-section2{
+
+  a{
+    padding:1rem;
+  }
+}
+
 
 #copy-right{
   grid-area:copy-r;
+  margin:0;
   text-align:center;
   font-size:0.80rem;
 }

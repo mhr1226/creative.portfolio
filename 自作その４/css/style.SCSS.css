@@ -17,9 +17,25 @@ body {
 body img {
   width: 100%;
 }
+body .a-block {
+  display: block;
+}
+body #first-border {
+  padding: 1.5rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+body .others-border {
+  padding: 1.5rem;
+  border-bottom: 1px solid black;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
 
 h2 {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
 }
 
 header {
@@ -32,11 +48,9 @@ header {
 header > a {
   font-size: 1.9rem;
   grid-area: logo;
-  text-decoration: none;
-  color: black;
 }
-header a {
-  text-decoration: none;
+header nav {
+  position: relative;
 }
 header a:hover {
   text-decoration: underline;
@@ -62,19 +76,15 @@ header nav > a {
 
 main {
   grid-area: main;
+  margin-bottom: 15rem;
 }
 main .main-text {
   margin: 2rem;
 }
 
 .read-more {
-  text-decoration: none;
-  color: black;
   display: grid;
   justify-content: center;
-}
-.read-more:hover {
-  text-decoration: underline;
 }
 
 #section1 {
@@ -106,7 +116,7 @@ aside p {
   margin-bottom: 1rem;
 }
 
-#aside-section1, #aside-section2, #aside-section3 {
+#aside-section1, #aside-section2 {
   display: grid;
   row-gap: 1rem;
 }
@@ -121,33 +131,31 @@ aside p {
   border-radius: 50%;
 }
 
-#aside-section3 p {
-  margin: 0;
-  padding: 1rem;
+#aside-section3 h2 {
+  margin-bottom: 2rem;
 }
-#aside-section3 #first-border {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-#aside-section3 .others-border {
-  border-bottom: 1px solid black;
+
+footer, #copy-right {
+  background-color: #F7F7F7;
 }
 
 footer {
   grid-area: foot;
-  background-color: #F7F7F7;
+  margin: 4rem 0 0 0;
+  padding: 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 footer section {
   width: 30%;
 }
-footer .a-block {
-  display: block;
+footer h2 {
+  margin-bottom: 2rem;
 }
 
 #foot-section1 a {
+  font-size: 15px;
   padding: 0.25rem;
 }
 #foot-section1 a::before {
@@ -155,8 +163,13 @@ footer .a-block {
   color: black;
 }
 
+#foot-section2 a {
+  padding: 1rem;
+}
+
 #copy-right {
   grid-area: copy-r;
+  margin: 0;
   text-align: center;
   font-size: 0.8rem;
 }
