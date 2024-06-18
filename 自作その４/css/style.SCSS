@@ -5,13 +5,14 @@ body{
   min-height:100vh;
   display:grid;
   grid-template:
-  " head  head   head   head  " 
-  "....   ....   ....   ....  " 3rem
-  "....   main   aside  ....  "
-  "....   ....   ....   ....  "3rem
-  "foot   foot   foot   foot  "
-  "copy-r copy-r copy-r copy-r"
-  /2rem 2fr 1fr 2rem;
+  "head  head   head     head " 
+  "....   ....    ....    ....  " 3rem
+  "....   sec-top sec-top ....  "
+  "....   main    aside   ....  "
+  "....   ....    ....    ....  "3rem
+  "foot   foot    foot    foot  "
+  "....   copy-r  copy-r  copy-r"
+  /3rem 2.5fr 1fr 3rem;
     
   @include space-setting(0,0);
   img{
@@ -52,7 +53,6 @@ header{
   ".... logo    logo"
   "navi navi    navi"
   ".... ....    ...." 1.5rem
-  ".... sec-top ...."
   /2rem 1fr 2rem;
   row-gap:1rem;
   margin-top:1rem;
@@ -110,7 +110,7 @@ header{
 
 main{
   grid-area:main;
-  margin-bottom:15rem;
+  margin:0 1rem 15rem 0;
   .main-text{
     // text-align:center;
     margin:2rem;
@@ -189,7 +189,7 @@ footer,#copy-right{
 }
 footer{
   grid-area:foot;
-  @include space-setting(4rem 0 0 0,2rem);
+  @include space-setting(3rem 0 0 0,3rem);
   display:flex;
   justify-content:space-between;
   gap:1rem;
@@ -228,3 +228,17 @@ footer{
   text-align:center;
   font-size:0.80rem;
 }
+
+
+// #twitter-timeline-box{
+//   max-height:300px;
+  
+// }
+.twitter-timeline{
+  width:100%;
+  height:300px;
+  overflow:auto;
+  display:flex;
+  border-radius:10%;
+}
+
