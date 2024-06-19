@@ -11,7 +11,7 @@ body{
   "....   main    aside   ....  "
   "....   ....    ....    ....  "3rem
   "foot   foot    foot    foot  "
-  "....   copy-r  copy-r  copy-r"
+  "copy-r copy-r  copy-r  copy-r"
   /3rem 2.5fr 1fr 3rem;
     
   @include space-setting(0,0);
@@ -26,13 +26,15 @@ body{
 
   #first-border{
     padding:1.5rem;
-    border-top:1px solid black;
-    border-bottom:1px solid black;
+    padding-left:0;
+    border-top:1px solid #d5d0d0;
+    border-bottom:1px solid #d5d0d0;
   }
 
   .others-border{
     padding:1.5rem;
-    border-bottom:1px solid black;
+    padding-left:0;
+    border-bottom:1px solid #d5d0d0;
   }
 
   a{
@@ -50,21 +52,22 @@ header{
   grid-area:head;
   display:grid;
   grid-template:
-  ".... logo    logo"
-  "navi navi    navi"
-  ".... ....    ...." 1.5rem
-  /2rem 1fr 2rem;
+  ".... logo logo"
+  "navi navi navi"
+  ".... .... ...." 1.5rem
+  /4rem 1fr 2rem;
   row-gap:1rem;
   margin-top:1rem;
 
   > a{
     font-size:1.90rem;
     grid-area:logo;
+    text-decoration: none;
   }
 
-  nav{
-    position:relative;
-  }
+  // nav{
+  //   position:relative;
+  // }
 
   // ホバー時の処理をJSで操作練習※後日
   // .sub-text1{
@@ -76,23 +79,12 @@ header{
   //   left:30px;
   // }
 
-  a{
-
-    &:hover{
-      text-decoration: underline;
-
-      // .subtext1{
-      //   display:block;
-      // }
-    }
-  }
-
   nav {
     grid-area:navi;
     background-color:#333333;
-    padding:10px 0 10px 30px;
+    padding:1rem 0 1rem 4rem;
     display:flex;
-    gap:1.5rem;
+    gap:3rem;
     
     >a{
       color:white;
@@ -224,21 +216,7 @@ footer{
 
 #copy-right{
   grid-area:copy-r;
-  margin:0;
+  @include space-setting(0,1rem);
   text-align:center;
   font-size:0.80rem;
 }
-
-
-// #twitter-timeline-box{
-//   max-height:300px;
-  
-// }
-.twitter-timeline{
-  width:100%;
-  height:300px;
-  overflow:auto;
-  display:flex;
-  border-radius:10%;
-}
-
