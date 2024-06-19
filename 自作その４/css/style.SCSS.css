@@ -8,6 +8,7 @@
 
 body {
   font-size: 1rem;
+  min-width: 100vw;
   min-height: 100vh;
   display: grid;
   grid-template: "head  head   head     head " "....   ....    ....    ....  " 3rem "....   sec-top sec-top ....  " "....   main    aside   ....  " "....   ....    ....    ....  " 3rem "foot   foot    foot    foot  " "copy-r copy-r  copy-r  copy-r"/3rem 2.5fr 1fr 3rem;
@@ -170,5 +171,40 @@ footer h2 {
   padding: 1rem;
   text-align: center;
   font-size: 0.8rem;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 30vh;
+    display: grid;
+    grid-template: "head   " "....   " 1rem "sec-top" "....   " 2rem "main   " "....   " 2rem "aside  " "....   " 2rem "foot   " "copy-r";
+  }
+  #section-top, header, main, aside {
+    margin: 0 1rem;
+  }
+  header {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  header > a {
+    margin: 1rem 0;
+    padding: 0 0 0 2rem;
+  }
+  header nav {
+    padding: 1rem 0 1rem 0;
+    justify-content: center;
+  }
+  #section-top {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 1.5rem;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer section {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.SCSS.css.map */

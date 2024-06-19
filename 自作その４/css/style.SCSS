@@ -1,7 +1,11 @@
 @use "../../../default_mixin_setting/_main_mixin" as *;
 
+// PC用
+
+
 body{
   font-size:1rem;
+  min-width:100vw;
   min-height:100vh;
   display:grid;
   grid-template:
@@ -219,4 +223,54 @@ footer{
   @include space-setting(0,1rem);
   text-align:center;
   font-size:0.80rem;
+}
+
+// スマホ用
+@media screen and (max-width:767px){
+  body{
+    min-width:30vh;
+    display:grid;
+    grid-template:
+    "head   "
+    "....   "1rem
+    "sec-top"
+    "....   "2rem
+    "main   "
+    "....   "2rem
+    "aside  "
+    "....   "2rem
+    "foot   "
+    "copy-r";
+  }
+
+
+  #section-top,header,main,aside{
+    margin:0 1rem;
+  }
+  header{
+    display:block;
+    @include space-setting(0,0);
+    >a{
+      @include space-setting(1rem 0,0 0 0 2rem);
+    }
+
+    nav{
+      padding:1rem 0 1rem 0;
+      justify-content: center;
+    }
+    
+  }
+
+  #section-top{
+    display:flex;
+    flex-flow:row wrap;
+    row-gap:1.5rem;
+  }
+
+  footer{
+    flex-direction:column;
+    section{
+      width:100%;
+    }
+  }
 }
