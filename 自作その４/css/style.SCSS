@@ -20,7 +20,7 @@ body{
     
   @include space-setting(0,0);
   img{
-    width:100%;
+    max-width:100%;
   }
 
   .a-block{
@@ -168,7 +168,7 @@ aside{
     place-items: center;
   }
   img{
-    width:50%;
+    max-width:50%;
     border-radius:50%;
   }
 }
@@ -228,7 +228,7 @@ footer{
 // スマホ用
 @media screen and (max-width:767px){
   body{
-    min-width:30vh;
+    min-width:300px;
     display:grid;
     grid-template:
     "head   "
@@ -241,6 +241,10 @@ footer{
     "....   "2rem
     "foot   "
     "copy-r";
+  }
+
+  h2{
+    font-size:1rem;
   }
 
 
@@ -273,4 +277,30 @@ footer{
       width:100%;
     }
   }
+
+  // 600px以下
+@media screen and(max-width:600px){
+
+  body{
+    font-size:0.9rem;
+    img{
+      min-width:300px;
+    }
+  }
+
+  header{
+    nav{
+      gap:1rem;
+    >a{
+      font-size:0.8rem;
+    }
+  }
+  }
+
+  aside{
+    font-size:0.9rem;
+  }
+  
 }
+}
+
