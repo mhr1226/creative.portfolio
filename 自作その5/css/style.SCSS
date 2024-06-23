@@ -1,0 +1,45 @@
+@use "../../../default_mixin_setting/_main_mixin" as * ;
+
+header{
+  @include space-setting(0,0);
+
+  > .head-sec{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+    @include space-setting(1rem,0.5rem);
+    row-gap:1rem;
+
+    div{
+      // ３つのdiv共通のCSS
+        display:flex;
+        justify-content:center;
+        width:30%;
+        column-gap:0.5rem;
+
+        // ハンバーガー、検索フォームのCSS
+        &:nth-of-type(1){
+          display:flex;
+          justify-content:flex-start;
+          .form-control{
+            width:70%;
+          }
+        }
+
+        // ロゴのCSS
+        &:nth-of-type(2){
+          margin:auto 2rem;
+          img{
+            width:100%;
+          }
+        }
+
+        &:nth-of-type(3){
+          display:flex;
+          justify-content:flex-end;
+        }
+      
+    }
+  }
+}
