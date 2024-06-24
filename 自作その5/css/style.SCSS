@@ -21,9 +21,17 @@ header{
         // ハンバーガー、検索フォームのCSS
         &:nth-of-type(1){
           display:flex;
-          justify-content:flex-start;
-          .form-control{
-            width:70%;
+          justify-content:center;
+          transform:scale(1.2);
+
+          form{
+            display:flex;
+            position:relative;
+          }
+          
+          .bi-search{
+            position:absolute;
+            right:10px;
           }
         }
 
