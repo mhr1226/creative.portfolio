@@ -6,6 +6,7 @@
   <meta name="description" content="シンプルなインテリアの商品ページです">
   <title>Furniture Design</title>
   <link rel="stylesheet" href="css/style.SCSS.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
   <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -14,19 +15,29 @@
     <!-- ロゴ -->
     <a href="index.html"><img src="image/logo.svg" alt=""></a>
     <!-- メニューバー -->
-    <div id="menu-bar">
+    <div class="menu-bar">
       <!-- 上側のバー -->
-      <div></div>
+      <div class="top-bar"></div>
       <!-- 下側のバー -->
-      <div></div>
+      <div class="bottom-bar"></div>
     </div>
-    <!-- ナビゲーション/クリックしたら表示 -->
+    
+    
+    
+    <!-- ※背景ごと行うパターンの場合は、nav-back内にnavを入れる -->
+    <!-- 今回は見本に従って別々で作ってます -->
+    
+      <!-- ナビゲーション/クリックしたら表示 -->
     <nav>
       <a href="product.html">PRODUCT</a>
       <a href="about.html">ABOUT</a>
       <a href="company.html">COMPANY</a>
       <a href="#">CONTACT</a>
     </nav>
+    <!-- ナビゲーション背景 -->
+    <div class="nav-back">
+    </div>
+    
   </header>
   <!-- メイン -->
   <main>
@@ -42,7 +53,7 @@
       <li>
         <a href="items/item2.html">
           <img src="image/item2.jpg" alt="">
-          <p>プロダクト2</p>
+          <p class="pColor">プロダクト2</p>
           <p>\3,000 +tax</p>
         </a>
       </li>

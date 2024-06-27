@@ -1,39 +1,92 @@
+@use "../../../default_mixin_setting/_main_mixin" as *;
 
+body{
+  @include space-setting(0,0);
+}
 
 header{
   margin:30px;
   display:flex;
   justify-content:space-between;
+  position:relative;
 
 
   > a{
     display:block;
   }
-  #menu-bar{
+  .menu-bar{
   height:30px;
-  position:relative;
     width:30px;
+    display:flex;
+    justify-content:center;
+    position:relative;
   // バーの装飾
-  div{
+    div{
     position:absolute;
+    z-index:30;
     width:30px;
+    transition:all 0.5s ease;
+    // メニュー非表示のCSS
     border:1px solid black;
+    // メニュー表示時のCSS
+    // border:1px solid white;
+    
     // 上側のバー
     &:nth-of-type(1){
-      border-top:2px solid black;
+      // メニュー非表示のCSS
+      // border-top:1px solid black;
       top:10px;
+
+      //メニュー表示時のCSS 
+      // border-top:1px solid white;
+      // top:50%;
+      // transform:rotate(45deg);
+      
     }
   
     // 下側のバー
     &:nth-of-type(2){
-      border-bottom:2px solid black;
+      // メニュー非表示のCSS
+      // border-bottom:1px solid black;
       bottom:10px;
+
+      // メニュー表示時のCSS
+      // border-bottom:1px solid white;
+      // top:50%;
+      // transform:rotate(-45deg);
     }
   }
 }
 
-  nav{
+  .nav-back,nav{
+    position:fixed;
+  }
+
+  .nav-back{
+    top:0;
+    left:0;
+    background-color:black;
+    opacity:0.8;
+    width:100%;
+    height:100%;
+    z-index:10;
+    
     display:none;
+  }
+  
+  nav{
+    display:flex;
+    flex-direction:column;
+    top:30px;
+    left:30px;
+    z-index:20;
+    display:none;
+    // transform:translateX(-200%);
+    a{
+      text-decoration:none;
+      color:white;
+    }
+
   }
 
 
