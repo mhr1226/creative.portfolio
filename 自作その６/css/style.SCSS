@@ -2,19 +2,45 @@
 
 body{
   @include space-setting(0,0);
+  font-family:"Meiryo",sans-serif;
+  font-size:0.875rem;
+
+  p{
+    font-size:0.75rem;
+    @include space-setting(0,0);
+  }
+
+  a{
+    display:block;
+    text-decoration:none;
+    color:black;
+    transition:all 0.5s ease;
+
+    &:hover{
+      opacity:0.7;
+    }
+  }
 }
 
 header{
-  margin:30px;
+  padding:0 40px;
+  background-color:white;
   display:flex;
   justify-content:space-between;
   align-items: center;
-  position:relative;
-
-
-  > a{
-    display:block;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-sizing:border-box;
+  
+  img{
+    max-width:100%;
   }
+
+
+  // > a{
+  //   display:block;
+  // }
   .menu-bar{
     height:30px;
     width:30px;
@@ -108,10 +134,42 @@ header{
     }
 
   }
+}
 
-
-
+main{
   
+  padding:80px auto 160px auto;
+  img{
+    width:100%;
+  }
+  ul{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+  }
 
+  li{
+    list-style:none;
+  }
 
+  .view-more{
+    margin-top:80px;
+    text-align:center;
+    font-size:0.875rem;
+  }
+}
+
+footer{
+  display:flex;
+  justify-content:space-between;
+  flex-direction:column;
+
+  nav{
+    display:flex;
+    gap:20px;
+  }
+
+  p{
+    font-size:0.625rem;
+  }
 }

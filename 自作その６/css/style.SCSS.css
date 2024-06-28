@@ -9,17 +9,38 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Meiryo", sans-serif;
+  font-size: 0.875rem;
+}
+body p {
+  font-size: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+body a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s ease;
+}
+body a:hover {
+  opacity: 0.7;
 }
 
 header {
-  margin: 30px;
+  padding: 0 40px;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-sizing: border-box;
 }
-header > a {
-  display: block;
+header img {
+  max-width: 100%;
 }
 header .menu-bar {
   height: 30px;
@@ -85,5 +106,38 @@ header nav {
 header nav a {
   text-decoration: none;
   color: white;
+}
+
+main {
+  padding: 80px auto 160px auto;
+}
+main img {
+  width: 100%;
+}
+main ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+main li {
+  list-style: none;
+}
+main .view-more {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+footer nav {
+  display: flex;
+  gap: 20px;
+}
+footer p {
+  font-size: 0.625rem;
 }
 /*# sourceMappingURL=style.SCSS.css.map */
