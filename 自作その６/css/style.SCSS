@@ -44,7 +44,7 @@ header{
   .menu-bar{
     height:30px;
     width:30px;
-    @include space-setting(10px,10px);
+    @include space-setting(10px 0,10px 0);
     display:flex;
     justify-content:center;
     position:relative;
@@ -138,7 +138,7 @@ header{
 
 main{
   
-  padding:80px auto 160px auto;
+  padding:80px 40px 160px 40px;
   img{
     width:100%;
   }
@@ -146,6 +146,7 @@ main{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:35px;
+    padding:0;
   }
 
   li{
@@ -154,6 +155,7 @@ main{
 
   .view-more{
     margin-top:80px;
+    margin-bottom:80px;
     text-align:center;
     font-size:0.875rem;
   }
@@ -162,7 +164,10 @@ main{
 footer{
   display:flex;
   justify-content:space-between;
-  flex-direction:column;
+  position:relative;
+  bottom:20px;
+  padding:0 40px;
+  // flex-direction:column;
 
   nav{
     display:flex;
@@ -171,5 +176,6 @@ footer{
 
   p{
     font-size:0.625rem;
+
   }
 }
