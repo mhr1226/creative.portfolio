@@ -178,11 +178,48 @@ main{
     font-size:0.875rem;
   }
 
+  // product1のCSS
   .page-view-1{
     display:flex;
     justify-content:center;
     gap:20px;
     margin:40px 0 40px 0;
+  }
+
+  // itemsのCSS
+  .main-container{
+    display:flex;
+    justify-content:flex-start;
+    gap:50px;
+
+    img{
+      width:45%;
+    }
+
+    div{
+      width:35%;
+      display:flex;
+      flex-direction:column;
+      row-gap:30px;
+
+      p{
+        font-size:0.875rem;
+      }
+
+      dl{
+        display:flex;
+        flex-wrap:wrap;
+
+        dt{
+          width:30%;
+        }
+
+        dd{
+          width:70%;
+          margin:0;
+        }
+      }
+    }
   }
 }
 

@@ -149,6 +149,34 @@ main .page-view-1 {
   gap: 20px;
   margin: 40px 0 40px 0;
 }
+main .main-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+}
+main .main-container img {
+  width: 45%;
+}
+main .main-container div {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+main .main-container div p {
+  font-size: 0.875rem;
+}
+main .main-container div dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .main-container div dl dt {
+  width: 30%;
+}
+main .main-container div dl dd {
+  width: 70%;
+  margin: 0;
+}
 
 footer {
   display: flex;
